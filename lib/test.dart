@@ -11,7 +11,7 @@ class MyWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        
+
         title: Text("HTL"),
 
         // titleSpacing: 0,
@@ -23,7 +23,7 @@ class MyWidget extends StatelessWidget {
         //
         // ],
 
-        
+
       ),
 
       drawer: Drawer(
@@ -79,43 +79,43 @@ class PractisRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-      child: Column(
-        children: [
-          Container(
+        child: Column(
+          children: [
+            Container(
 
 
 
 
-            color: Colors.yellow,
-            height: 200.0,
+              color: Colors.yellow,
+              height: 200.0,
 
 
 
 
-          ),
-          Container(
-            color: Colors.yellow,
-            height: 200.0,
-          ),          Container(
-            color: Colors.blue,
-            width: double.infinity,
-            height: 200.0,
-
-          ),
-          Container(
-            color: Colors.blueAccent,
-            height: 200.0,
-            width: double.infinity,
-
-
-            child: Text(
-              'Hello',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 50,
-                fontWeight: FontWeight.bold,
-              ),
             ),
+            Container(
+              color: Colors.yellow,
+              height: 200.0,
+            ),          Container(
+              color: Colors.blue,
+              width: double.infinity,
+              height: 200.0,
+
+            ),
+            Container(
+              color: Colors.blueAccent,
+              height: 200.0,
+              width: double.infinity,
+
+
+              child: Text(
+                'Hello',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 50,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
 
               // Icon(Icons.accessibility),
               // Text("Hello")
@@ -124,22 +124,22 @@ class PractisRow extends StatelessWidget {
 
 
 
-          ),
+            ),
 
 
-          Container(
+            Container(
 
-            color: Colors.blue,
-            height: 200.0,
-          ),
-          Container(
-            color: Colors.red,
-            height: 200.0,
+              color: Colors.blue,
+              height: 200.0,
+            ),
+            Container(
+              color: Colors.red,
+              height: 200.0,
 
 
-          ),
-        ],
-      ),
+            ),
+          ],
+        ),
 
       ),
     );
@@ -156,10 +156,10 @@ class Practice11 extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text("hello",
-          style: TextStyle(
-            fontSize: 80,
-            color: Colors.red
-          ),),
+            style: TextStyle(
+                fontSize: 80,
+                color: Colors.red
+            ),),
 
         ),
 
@@ -215,14 +215,14 @@ class Practise01 extends StatelessWidget {
                   color: Colors.cyanAccent,
                   width: double.infinity,
                   height: 100,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text("data"),
-                Icon(Icons.accessibility_sharp,),
-                Text("data"),
-              ],
-            ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("data"),
+                      Icon(Icons.accessibility_sharp,),
+                      Text("data"),
+                    ],
+                  ),
 
 
                 ),
@@ -369,29 +369,29 @@ class Practise2 extends StatelessWidget {
       body: SafeArea(
 
 
-child: Column(
-  mainAxisAlignment: MainAxisAlignment.center,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
 
 
-  children: [
+          children: [
 
 
-    Container(
-        margin: EdgeInsets.only(left: 20, top: 20, right: 20),
-      child:Image.network("https://kinsta.com/wp-content/uploads/2020/08/tiger-jpg.jpg"),
-    ),
+            Container(
+              margin: EdgeInsets.only(left: 20, top: 20, right: 20),
+              child:Image.network("https://kinsta.com/wp-content/uploads/2020/08/tiger-jpg.jpg"),
+            ),
 
-    Container(
-      margin: EdgeInsets.only(left: 20, top: 20, right: 20),
-      child:Image.asset("images/tiger-jpg.jpg"),
-      
-      
-    )
+            Container(
+              margin: EdgeInsets.only(left: 20, top: 20, right: 20),
+              child:Image.asset("images/tiger-jpg.jpg"),
 
 
+            )
 
-  ],
-),
+
+
+          ],
+        ),
       ),
 
     );
@@ -418,27 +418,27 @@ class Preactise03 extends StatelessWidget {
 
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-   crossAxisAlignment: CrossAxisAlignment.center,
-   children: [
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
 
 
-     Image.asset("images/tiger-jpg.jpg",alignment: Alignment.center),
+                      Image.asset("images/tiger-jpg.jpg",alignment: Alignment.center),
 
-     Icon(Icons.accessibility_sharp),
+                      Icon(Icons.accessibility_sharp),
 
-     Text(
+                      Text(
 
-       "01",
-       style: TextStyle(
-         fontWeight: FontWeight.bold,
-         fontSize: 40,
-       ),
-     ),
-     Icon(Icons.accessibility_sharp)
+                        "01",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 40,
+                        ),
+                      ),
+                      Icon(Icons.accessibility_sharp)
 
-     
-   ],
- ),
+
+                    ],
+                  ),
 
                 ),
               ),
@@ -625,107 +625,107 @@ class RosColumsPractis extends StatelessWidget {
               children: [
 
                 Row(
-                children: [
-                  Container(
-                    color: Colors.blueAccent.shade700,
-                    height: 100,
-                    width: 100,
-                  ),
+                  children: [
+                    Container(
+                      color: Colors.blueAccent.shade700,
+                      height: 100,
+                      width: 100,
+                    ),
 
 
-                  Container(
-                    color: Colors.blueAccent.shade400,
-                    height: 100,
-                    width: 100,
-                  ),
-                  Container(
-                    color: Colors.blueAccent.shade700,
-                    height: 100,
-                    width: 100,
-                  ),
+                    Container(
+                      color: Colors.blueAccent.shade400,
+                      height: 100,
+                      width: 100,
+                    ),
+                    Container(
+                      color: Colors.blueAccent.shade700,
+                      height: 100,
+                      width: 100,
+                    ),
 
-                  Container(
-                    color: Colors.blueAccent.shade700,
-                    height: 100,
-                    width: 100,
-                  ),
-                  Container(
-                    color: Colors.blueAccent.shade400,
-                    height: 100,
-                    width: 100,
-                  ),
+                    Container(
+                      color: Colors.blueAccent.shade700,
+                      height: 100,
+                      width: 100,
+                    ),
+                    Container(
+                      color: Colors.blueAccent.shade400,
+                      height: 100,
+                      width: 100,
+                    ),
 
-                  Container(
-                    color: Colors.blueAccent.shade700,
-                    height: 100,
-                    width: 100,
-                  ),
+                    Container(
+                      color: Colors.blueAccent.shade700,
+                      height: 100,
+                      width: 100,
+                    ),
 
 
-                ],
+                  ],
 
 
 
                 ),
 
 
-      Column(
+                Column(
 
-  children: [
-    Container(
-      color: Colors.black,
-      height: 100,
-      width: 600,
+                  children: [
+                    Container(
+                      color: Colors.black,
+                      height: 100,
+                      width: 600,
 
-    ),
+                    ),
 
-    Container(
-      color: Colors.blueAccent.shade100,
-      height: 100,
-      width: 600,
-    ),
-    Container(
-      color: Colors.blueAccent.shade200,
-      height: 100,
-      width: 500,
-    ),
-    Container(
-      color: Colors.blueAccent.shade400,
-      height: 100,
-      width: 500,
-    ),
-    Container(
-      color: Colors.blueAccent.shade100,
-      height: 100,
-      width: 500,
-    ),
-    Container(
-      color: Colors.blueAccent.shade700,
-      height: 100,
-      width: 500,
-    ),
-    Container(
-      color: Colors.blueAccent.shade200,
-      height: 100,
-      width: 500,
-    ),
+                    Container(
+                      color: Colors.blueAccent.shade100,
+                      height: 100,
+                      width: 600,
+                    ),
+                    Container(
+                      color: Colors.blueAccent.shade200,
+                      height: 100,
+                      width: 500,
+                    ),
+                    Container(
+                      color: Colors.blueAccent.shade400,
+                      height: 100,
+                      width: 500,
+                    ),
+                    Container(
+                      color: Colors.blueAccent.shade100,
+                      height: 100,
+                      width: 500,
+                    ),
+                    Container(
+                      color: Colors.blueAccent.shade700,
+                      height: 100,
+                      width: 500,
+                    ),
+                    Container(
+                      color: Colors.blueAccent.shade200,
+                      height: 100,
+                      width: 500,
+                    ),
 
-    Container(
-      color: Colors.blueAccent.shade100,
-      height: 100,
-      width: 500,
-    ),
+                    Container(
+                      color: Colors.blueAccent.shade100,
+                      height: 100,
+                      width: 500,
+                    ),
 
-  ],
-)
-
-
+                  ],
+                )
 
 
 
 
 
-        ],
+
+
+              ],
 
 
             ),
@@ -1252,7 +1252,7 @@ class ListtilesPric extends StatelessWidget {
       body: ListView(
         children: [
           ListTile(
-          title: Text("Sajeeb"),
+            title: Text("Sajeeb"),
             subtitle: Text("Home"),
             leading: Icon(Icons.accessibility_sharp),
             trailing: Icon(Icons.ac_unit),
@@ -1263,6 +1263,37 @@ class ListtilesPric extends StatelessWidget {
     ));
   }
 }
+
+
+class LiqudSwipPractise extends StatelessWidget {
+  const LiqudSwipPractise({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(child: Scaffold(
+      body: Center(
+        child: Container(
+          width: MediaQuery.of(context).size.width/5,
+          height: MediaQuery.of(context).size.height/5,
+          color: Colors.blue,
+          child: Center(
+            child: Text(
+              "Hello",
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+
+        ),
+      ),
+    ));
+  }
+}
+
+
+
 
 
 
