@@ -1,6 +1,6 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
+
 
 
 
@@ -72,292 +72,9 @@ class MyWidget extends StatelessWidget {
 
 
 
-class PractisRow extends StatelessWidget {
-  const PractisRow({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
 
 
-
-
-              color: Colors.yellow,
-              height: 200.0,
-
-
-
-
-            ),
-            Container(
-              color: Colors.yellow,
-              height: 200.0,
-            ),          Container(
-              color: Colors.blue,
-              width: double.infinity,
-              height: 200.0,
-
-            ),
-            Container(
-              color: Colors.blueAccent,
-              height: 200.0,
-              width: double.infinity,
-
-
-              child: Text(
-                'Hello',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 50,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-
-              // Icon(Icons.accessibility),
-              // Text("Hello")
-
-
-
-
-
-            ),
-
-
-            Container(
-
-              color: Colors.blue,
-              height: 200.0,
-            ),
-            Container(
-              color: Colors.red,
-              height: 200.0,
-
-
-            ),
-          ],
-        ),
-
-      ),
-    );
-  }
-}
-
-
-class Practice11 extends StatelessWidget {
-  const Practice11({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("hello",
-            style: TextStyle(
-                fontSize: 80,
-                color: Colors.red
-            ),),
-
-        ),
-
-        body: Row(
-          children: [
-
-            Container(
-              color: Colors.blue,
-              height: double.infinity,
-              width: 100.0,
-              child: Icon(
-                Icons.accessibility_sharp,
-                size: 50,
-              ),
-            ),
-            Container(
-              color: Colors.red,
-              width: 100.0,
-              height: double.infinity,
-            ),
-
-          ],
-
-
-        ),
-      ),
-    );
-  }
-}
-
-class Practise01 extends StatelessWidget {
-  const Practise01({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-
-      backgroundColor: Colors.white,
-
-      body: SafeArea(
-        child: SingleChildScrollView(
-
-          child: Container(
-
-
-            child: Column(
-              children: [
-                //  Text("data"),
-                // Icon(Icons.accessibility_sharp,),
-                // Text("data"),
-
-                Container(
-                  color: Colors.cyanAccent,
-                  width: double.infinity,
-                  height: 100,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text("data"),
-                      Icon(Icons.accessibility_sharp,),
-                      Text("data"),
-                    ],
-                  ),
-
-
-                ),
-
-                Container(
-                  color: Colors.yellow,
-                  width: double.infinity,
-                  height: 100,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text("data"),
-                      Icon(Icons.accessibility_sharp,),
-                      Text("data"),
-                    ],
-                  ),
-
-
-                )
-                ,
-
-                Container(
-                  color: Colors.cyanAccent,
-                  width: double.infinity,
-                  height: 100,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-
-                      Text("data"),
-                      Icon(Icons.accessibility_sharp,),
-                      Text("data"),
-                    ],
-                  ),
-
-
-                ),
-                Container(
-                  color: Colors.yellow,
-                  width: double.infinity,
-                  height: 100,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text("data"),
-                      Icon(Icons.accessibility_sharp,),
-                      Text("data"),
-                    ],
-                  ),
-
-
-                ),
-                Container(
-                  color: Colors.cyanAccent,
-                  width: double.infinity,
-                  height: 100,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-
-                      Text("data"),
-                      Icon(Icons.accessibility_sharp,),
-                      Text("data"),
-                    ],
-                  ),
-
-
-                ),
-                Container(
-                  color: Colors.yellow,
-                  width: double.infinity,
-                  height: 100,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-
-                      Text("data"),
-                      Icon(Icons.accessibility_sharp,),
-                      Text("data"),
-                    ],
-                  ),
-
-
-
-
-                ),
-
-                Container(
-                  color: Colors.cyanAccent,
-                  width: double.infinity,
-                  height: 100,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-
-                      Text("data"),
-                      Icon(Icons.accessibility_sharp,),
-                      Text("data"),
-                    ],
-                  ),
-
-
-                ),
-
-                Container(
-                  color: Colors.yellow,
-                  width: double.infinity,
-                  height: 100,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-
-                      Text("data"),
-                      Icon(Icons.accessibility_sharp,),
-                      Text("data"),
-                    ],
-                  ),
-
-
-                ),
-
-
-              ],
-              // crossAxisAlignment: CrossAxisAlignment.end,
-
-
-            ),
-
-
-          ),
-        ),
-      ),
-    );
-  }
-}
 
 class Practise2 extends StatelessWidget {
   const Practise2({super.key});
@@ -1049,170 +766,6 @@ class pracitse extends StatelessWidget {
 
 
 
-class PracticeN3 extends StatelessWidget {
-  const PracticeN3({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: SafeArea(
-        child: Scaffold(
-          body: ListView(children: [
-
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                height: 200,
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      Container(
-                        color: Colors.amberAccent,
-                        height: double.infinity,
-                        width: 100,
-                      ),
-                      Container(
-                        color: Colors.purpleAccent,
-                        height: double.infinity,
-                        width: 100,
-                      ),
-                      Container(
-                        color: Colors.lightGreenAccent,
-                        height: double.infinity,
-                        width: 100,
-                      ),
-                      Container(
-                        color: Colors.green,
-                        height: double.infinity,
-                        width: 100,
-                      ),
-                      Container(
-                        color: Colors.white,
-                        height: double.infinity,
-                        width: 100,
-                      ),
-                      Container(
-                        color: Colors.deepPurple,
-                        height: double.infinity,
-                        width: 100,
-                      ),
-                      Container(
-                        color: Colors.grey,
-                        height: double.infinity,
-                        width: 100,
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-
-
-
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      Container(
-                        color: Colors.amberAccent,
-                        height: double.infinity,
-                        width: 100,
-                        child: Center(child: Text("Hello 1!")),
-                      ),
-                      Container(
-                        color: Colors.purpleAccent,
-                        height: double.infinity,
-                        width: 100,
-                        child: Center(child: Text("Hello 02!")),
-                      ),
-                      Container(
-                        color: Colors.lightGreenAccent,
-                        height: double.infinity,
-                        width: 100,
-                        child: Center(child: Text("Hello 03!")),
-                      ),
-                      Container(
-                        color: Colors.green,
-                        height: double.infinity,
-                        width: 100,
-                        child: Center(child: Text("Hello 04!")),
-                      ),
-                      Container(
-                        color: Colors.white,
-                        height: double.infinity,
-                        width: 100,
-                        child: Center(child: Text("Hello 05!")),
-                      ),
-                      Container(
-                        color: Colors.deepPurple,
-                        height: double.infinity,
-                        width: 100,
-                        child: Center(child: Text("Hello 05!")),
-                      ),
-                      Container(
-                        color: Colors.grey,
-                        height: double.infinity,
-                        width: 100,
-                        child: Center(child: Text("Hello 06!")),
-                      ),
-                    ],
-                  ),
-                ),
-                height: 250,
-              ),
-            ),
-
-            Container(
-              color: Colors.cyan,
-              height: 250,
-              width: 250,
-            ),
-            Container(
-              color: Colors.teal,
-              height: 250,
-              width: 250,
-            ),
-            Container(
-              color: Colors.amberAccent,
-              height: 250,
-              width: 250,
-            ),
-            Container(
-              color: Colors.cyan,
-              height: 250,
-              width: 250,
-            ),
-            Container(
-              color: Colors.teal,
-              height: 250,
-              width: 250,
-            ),
-            Container(
-              color: Colors.amberAccent,
-              height: 250,
-              width: 250,
-            ),
-            Container(
-              color: Colors.cyan,
-              height: 250,
-              width: 250,
-            ),
-            Container(
-              color: Colors.teal,
-              height: 250,
-              width: 250,
-            ),
-          ]),
-        ),
-      ),
-    );
-  }
-}
-
 
 class Practise02 extends StatelessWidget {
   const Practise02({super.key});
@@ -1291,6 +844,45 @@ class LiqudSwipPractise extends StatelessWidget {
     ));
   }
 }
+
+
+
+
+
+
+
+
+
+
+class MakeFlag extends StatelessWidget {
+  const MakeFlag({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(child: Scaffold(
+
+    ),);
+  }
+}
+
+
+class RoutingPractise extends StatefulWidget {
+  const RoutingPractise({super.key});
+
+  @override
+  State<RoutingPractise> createState() => _RoutingPractiseState();
+}
+
+class _RoutingPractiseState extends State<RoutingPractise> {
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}
+
+
+
+
 
 
 
