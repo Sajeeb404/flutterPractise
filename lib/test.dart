@@ -1,5 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter_projects/pages/page1.dart';
+import 'package:flutter_projects/pages/page2.dart';
 
 
 
@@ -137,6 +139,17 @@ class Preactise03 extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
+
+
+
+                      ElevatedButton(
+                        // Within the `FirstScreen` widget
+                        onPressed: () {
+                          // Navigate to the second screen using a named route.
+                          Navigator.pushNamed(context, '/');
+                        },
+                        child: const Text('Launch screen'),
+                      ),
 
 
                       Image.asset("images/tiger-jpg.jpg",alignment: Alignment.center),
@@ -882,18 +895,41 @@ class _RoutingPractiseState extends State<RoutingPractise> {
 
 
 
+class TabbarRoutingTest extends StatelessWidget{
 
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return DefaultTabController(length: 2, child: SafeArea(
+      child: Scaffold(
 
+        appBar: AppBar(
 
+          title: Text("Tab bar routing test"),
+          bottom: TabBar(
+            tabs: [
+              Tab(
+                text: ("tab1"),
+                icon: Icon(Icons.account_balance),
 
+              ),
+              Tab(
+                text: ("tab 2"),
+                icon: Icon(Icons.ac_unit),
+              )
+            ],
+          ),
 
+        ),
 
+        body: TabBarView(
+          children: [
+            PractisRow(),
+            Practise01(),
+          ],
+        ),
 
-
-
-
-
-
-
-
-
+      ),
+    ));
+  }
+}

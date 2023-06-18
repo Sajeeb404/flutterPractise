@@ -7,19 +7,41 @@ class PractisRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("app bar Routing Test"),
+
+        actions: [
+
+          IconButton(onPressed: (){
+            Navigator.pushNamedAndRemoveUntil(context, "/", (route) => false,);
+          }, icon: Icon(Icons.account_balance)),
+
+
+
+          IconButton(onPressed: (){
+            Navigator.pushNamedAndRemoveUntil(context, "/page02", (route) => false,);
+          }, icon: Icon(Icons.access_time_outlined)),
+
+
+          IconButton(onPressed: (){
+            Navigator.pushNamedAndRemoveUntil(context, "/page03", (route) => false,);
+          }, icon: Icon(Icons.accessibility_new_rounded)),
+
+
+          IconButton(onPressed: (){
+            Navigator.pushNamedAndRemoveUntil(context, "/page04", (route) => false,);
+          }, icon: Icon(Icons.account_balance_wallet_rounded)),
+
+        ],
+
+      ),
+
       body: SingleChildScrollView(
         child: Column(
           children: [
             Container(
-
-
-
-
               color: Colors.yellow,
               height: 200.0,
-
-
-
 
             ),
             Container(
@@ -43,6 +65,7 @@ class PractisRow extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 50,
                   fontWeight: FontWeight.bold,
+
                 ),
               ),
 
@@ -57,6 +80,14 @@ class PractisRow extends StatelessWidget {
 
 
             Container(
+              child: ElevatedButton(
+                // Within the `FirstScreen` widget
+                onPressed: () {
+                  // Navigate to the second screen using a named route.
+                  Navigator.pushNamed(context, '/page02');
+                },
+                child: const Text('Launch screen'),
+              ),
 
               color: Colors.blue,
               height: 200.0,

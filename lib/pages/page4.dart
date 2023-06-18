@@ -15,6 +15,36 @@ class PractiseGird extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(child: Scaffold(
+      appBar: AppBar(
+        title: Text("app bar Routing Test"),
+
+        actions: [
+
+          IconButton(onPressed: (){
+            Navigator.pushNamedAndRemoveUntil(context, "/", (route) => false,);
+          }, icon: Icon(Icons.account_balance)),
+
+
+
+          IconButton(onPressed: (){
+            Navigator.pushNamedAndRemoveUntil(context, "/page02", (route) => false,);
+          }, icon: Icon(Icons.account_balance)),
+
+
+          IconButton(onPressed: (){
+            Navigator.pushNamedAndRemoveUntil(context, "/page03", (route) => false,);
+          }, icon: Icon(Icons.account_balance)),
+
+
+          IconButton(onPressed: (){
+            Navigator.pushNamedAndRemoveUntil(context, "/page04", (route) => false,);
+          }, icon: Icon(Icons.account_balance)),
+
+        ],
+
+      ),
+
+
       body: GridView.count(
         mainAxisSpacing: 5,
         crossAxisSpacing: 50,
@@ -81,7 +111,7 @@ class PractiseGird extends StatelessWidget {
             // color: Colors.blueAccent,
             child: OutlinedButton(
               onPressed: (){
-                showToast("You are pressed.", context);
+                Navigator.pushNamed(context, '/page04');
               },
               child: Text("Out Lined Button"),
 

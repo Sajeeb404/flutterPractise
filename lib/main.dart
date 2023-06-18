@@ -5,6 +5,8 @@ import 'package:flutter_projects/pages/page3.dart';
 import 'package:flutter_projects/pages/page4.dart';
 import 'package:flutter_projects/test.dart';
 
+import 'form/login_forms.dart';
+
 
 
 
@@ -22,7 +24,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.brown),
       darkTheme: ThemeData(primarySwatch: Colors.brown),
       // darkTheme: ThemeData(primarySwatch: Colors.blueGrey),
-      home: RoutinP(),
+      // home: TabbarRoutingTest(),
+      initialRoute: '/',
+      routes: {
+        '/':(context) => LoginForm(),
+        '/page02':(context) => Practise01(),
+        '/page03':(context) => PractiseGird(),
+        '/page04':(context) => Page3(),
+        '/page05':(context) => Preactise03(),
+      },
     );
 
 
@@ -117,6 +127,92 @@ backgroundColor: Colors.cyanAccent,
     );
   }
 }
+
+class NavigationRoutingPract extends StatelessWidget{
+
+  @override
+  Widget build(BuildContext context) {
+
+
+    return DefaultTabController(
+      length: 5,
+      child: Scaffold(
+
+        appBar: AppBar(
+          title: Text("app bar Routing Test"),
+
+          actions: [
+
+       IconButton(onPressed: (){
+         Navigator.pushNamedAndRemoveUntil(context, "/", (route) => false,);
+       }, icon: Icon(Icons.account_balance)),
+
+
+
+            IconButton(onPressed: (){
+              Navigator.pushNamedAndRemoveUntil(context, "/page02", (route) => false,);
+            }, icon: Icon(Icons.account_balance)),
+
+
+            IconButton(onPressed: (){
+              Navigator.pushNamedAndRemoveUntil(context, "/page03", (route) => false,);
+            }, icon: Icon(Icons.account_balance)),
+
+
+            IconButton(onPressed: (){
+              Navigator.pushNamedAndRemoveUntil(context, "/page04", (route) => false,);
+            }, icon: Icon(Icons.account_balance)),
+
+          ],
+          bottom: TabBar(
+            tabs: [
+              Tab(
+                text: "Tab 1",
+                icon: Icon(Icons.ac_unit),
+              ),
+
+              Tab(
+                text: "Tab 2",
+                icon: Icon(Icons.accessibility_new),
+              ),
+
+              Tab(
+                text: "Tab 3",
+                icon: Icon(Icons.accessible_forward),
+              ),
+
+              Tab(
+                text: "Tab 4",
+                icon: Icon(Icons.account_balance),
+              ),
+
+              Tab(
+                text: "Tab 5",
+                icon: Icon(Icons.ad_units_sharp),
+              ),
+
+            ],
+          ),
+        ),
+
+        body: TabBarView(
+          children: [
+            PractisRow(),
+            Practise01(),
+            PractiseGird(),
+            Page3(),
+            Preactise03()
+          ],
+        ),
+
+      ),
+    );
+
+  }
+
+}
+
+
 
 
 
