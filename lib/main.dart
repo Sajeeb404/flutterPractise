@@ -6,9 +6,7 @@ import 'package:flutter_projects/pages/page4.dart';
 import 'package:flutter_projects/test.dart';
 
 import 'form/login_forms.dart';
-
-
-
+import 'form/signup_forms.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,20 +25,15 @@ class MyApp extends StatelessWidget {
       // home: TabbarRoutingTest(),
       initialRoute: '/',
       routes: {
-        '/':(context) => LoginForm(),
-        '/page02':(context) => Practise01(),
-        '/page03':(context) => PractiseGird(),
-        '/page04':(context) => Page3(),
-        '/page05':(context) => Preactise03(),
+        '/': (context) => LoginForm(),
+        '/pagesignup': (context) => SignUpForm(),
+        '/page03': (context) => PractiseGird(),
+        '/page04': (context) => Page3(),
+        '/page05': (context) => Preactise03(),
       },
     );
-
-
   }
 }
-
-
-
 
 class RoutinP extends StatefulWidget {
   const RoutinP({super.key});
@@ -50,7 +43,6 @@ class RoutinP extends StatefulWidget {
 }
 
 class _RoutinPState extends State<RoutinP> {
-
   var _countIndex = 0;
 
   final pages = [
@@ -61,25 +53,20 @@ class _RoutinPState extends State<RoutinP> {
     Preactise03()
   ];
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: new Theme(
         data: Theme.of(context).copyWith(
-          // sets the background color of the `BottomNavigationBar`
+            // sets the background color of the `BottomNavigationBar`
             canvasColor: Colors.black,
             // sets the active color of the `BottomNavigationBar` if `Brightness` is light
             primaryColor: Colors.red,
-            textTheme: Theme
-                .of(context)
+            textTheme: Theme.of(context)
                 .textTheme
                 .copyWith(caption: new TextStyle(color: Colors.yellow))),
-
         child: BottomNavigationBar(
           currentIndex: _countIndex,
-
-
           items: [
             BottomNavigationBarItem(
               backgroundColor: Colors.blueAccent,
@@ -87,36 +74,27 @@ class _RoutinPState extends State<RoutinP> {
               icon: Icon(Icons.message),
             ),
             BottomNavigationBarItem(
-
               backgroundColor: Colors.yellow,
-
               label: "Data Data",
               icon: Icon(Icons.message),
             ),
             BottomNavigationBarItem(
-backgroundColor: Colors.green,
-
+              backgroundColor: Colors.green,
               label: "Out linde Buttons",
               icon: Icon(Icons.message),
             ),
             BottomNavigationBarItem(
-backgroundColor: Colors.cyanAccent,
-
+              backgroundColor: Colors.cyanAccent,
               label: "Two Colors",
               icon: Icon(Icons.message),
             ),
             BottomNavigationBarItem(
-            backgroundColor: Colors.blueAccent,
-
+              backgroundColor: Colors.blueAccent,
               label: "Two Colors",
               icon: Icon(Icons.message),
             ),
-
-
-
-
           ],
-          onTap: (index){
+          onTap: (index) {
             setState(() {
               _countIndex = index;
             });
@@ -128,41 +106,51 @@ backgroundColor: Colors.cyanAccent,
   }
 }
 
-class NavigationRoutingPract extends StatelessWidget{
-
+class NavigationRoutingPract extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
-
     return DefaultTabController(
       length: 5,
       child: Scaffold(
-
         appBar: AppBar(
           title: Text("app bar Routing Test"),
-
           actions: [
-
-       IconButton(onPressed: (){
-         Navigator.pushNamedAndRemoveUntil(context, "/", (route) => false,);
-       }, icon: Icon(Icons.account_balance)),
-
-
-
-            IconButton(onPressed: (){
-              Navigator.pushNamedAndRemoveUntil(context, "/page02", (route) => false,);
-            }, icon: Icon(Icons.account_balance)),
-
-
-            IconButton(onPressed: (){
-              Navigator.pushNamedAndRemoveUntil(context, "/page03", (route) => false,);
-            }, icon: Icon(Icons.account_balance)),
-
-
-            IconButton(onPressed: (){
-              Navigator.pushNamedAndRemoveUntil(context, "/page04", (route) => false,);
-            }, icon: Icon(Icons.account_balance)),
-
+            IconButton(
+                onPressed: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                    context,
+                    "/",
+                    (route) => false,
+                  );
+                },
+                icon: Icon(Icons.account_balance)),
+            IconButton(
+                onPressed: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                    context,
+                    "/page02",
+                    (route) => false,
+                  );
+                },
+                icon: Icon(Icons.account_balance)),
+            IconButton(
+                onPressed: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                    context,
+                    "/page03",
+                    (route) => false,
+                  );
+                },
+                icon: Icon(Icons.account_balance)),
+            IconButton(
+                onPressed: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                    context,
+                    "/page04",
+                    (route) => false,
+                  );
+                },
+                icon: Icon(Icons.account_balance)),
           ],
           bottom: TabBar(
             tabs: [
@@ -170,31 +158,25 @@ class NavigationRoutingPract extends StatelessWidget{
                 text: "Tab 1",
                 icon: Icon(Icons.ac_unit),
               ),
-
               Tab(
                 text: "Tab 2",
                 icon: Icon(Icons.accessibility_new),
               ),
-
               Tab(
                 text: "Tab 3",
                 icon: Icon(Icons.accessible_forward),
               ),
-
               Tab(
                 text: "Tab 4",
                 icon: Icon(Icons.account_balance),
               ),
-
               Tab(
                 text: "Tab 5",
                 icon: Icon(Icons.ad_units_sharp),
               ),
-
             ],
           ),
         ),
-
         body: TabBarView(
           children: [
             PractisRow(),
@@ -204,18 +186,7 @@ class NavigationRoutingPract extends StatelessWidget{
             Preactise03()
           ],
         ),
-
       ),
     );
-
   }
-
 }
-
-
-
-
-
-
-
-

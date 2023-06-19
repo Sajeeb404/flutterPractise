@@ -1,7 +1,3 @@
-
-
-
-
 import 'package:flutter/material.dart';
 
 import '../pages/page4.dart';
@@ -13,26 +9,21 @@ class LoginForm extends StatefulWidget {
   State<LoginForm> createState() => _LoginFormState();
 }
 
-
-
 class _LoginFormState extends State<LoginForm> {
-
   TextEditingController emaileditingController = TextEditingController();
   TextEditingController passwordeditingController = TextEditingController();
 
-
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: Scaffold(
+    return SafeArea(
+        child: Scaffold(
       backgroundColor: Colors.blueAccent.shade100,
-      
-      
       appBar: AppBar(
         title: Center(child: Text("Company Name")),
       ),
       body: SingleChildScrollView(
         child: Padding(
-        padding: EdgeInsets.all(10.0),
+          padding: EdgeInsets.all(10.0),
           child: Column(
             children: [
               SizedBox(
@@ -56,15 +47,12 @@ class _LoginFormState extends State<LoginForm> {
                 ),
               ),
               Padding(
-                  padding: EdgeInsets.all(50.0),
-
+                padding: EdgeInsets.all(50.0),
                 child: Column(
                   children: [
-
                     SizedBox(
                       height: 2.0,
                     ),
-
                     TextField(
                       controller: emaileditingController,
                       keyboardType: TextInputType.emailAddress,
@@ -72,9 +60,7 @@ class _LoginFormState extends State<LoginForm> {
                         border: OutlineInputBorder(),
                         labelText: 'Email',
                       ),
-
                     ),
-
                     SizedBox(
                       height: 10.0,
                     ),
@@ -95,43 +81,46 @@ class _LoginFormState extends State<LoginForm> {
                       height: 50,
                       child: ElevatedButton(
                         onPressed: () {
-
-                          if(!emaileditingController.text.contains("@")){
+                          if (!emaileditingController.text.contains("@")) {
                             showToast("Ivalid email", context);
-                          }else if(passwordeditingController.text.length<6){
+                          } else if (passwordeditingController.text.length <
+                              6) {
                             showToast("Ivalid password", context);
-                          }else{
+                          } else {
                             showToast("Successfull Login", context);
                           }
-
-
                         },
-                        child: Text('Login',
+                        child: Text(
+                          'Login',
                           style: TextStyle(
                             fontSize: 30,
                             fontWeight: FontWeight.bold,
                           ),
-
                         ),
                       ),
                     ),
-
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Row(children: [
+                      Text(
+                        "Don't have an account",
+                      ),
+                      TextButton(
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/pagesignup');
+                          },
+                          child: Text("Sign Up")),
+                    ]),
                   ],
                 ),
-
               ),
 
-
               // TextButton(onPressed: onPressed(){}, child: null)
-              
             ],
           ),
         ),
       ),
     ));
   }
-
-
-
-
 }
