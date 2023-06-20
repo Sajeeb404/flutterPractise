@@ -7,6 +7,7 @@ import 'package:flutter_projects/test.dart';
 
 import 'form/login_forms.dart';
 import 'form/signup_forms.dart';
+import 'form/user_list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => LoginForm(),
-        '/pagesignup': (context) => SignUpForm(),
+        '/pagesignup': (context) => UserList(),
         '/page03': (context) => PractiseGird(),
         '/page04': (context) => Page3(),
         '/page05': (context) => Preactise03(),
