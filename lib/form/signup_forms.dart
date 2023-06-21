@@ -297,7 +297,7 @@ class _SignupsState extends State<Signups> {
       ScaffoldMessenger.of(context)
           .showSnackBar(const SnackBar(content: Text('Form Submitted')));
 
-      final String urls = "http://192.168.20.46:8080/api/posts";
+      final String urls = "http://192.168.20.38:8080/api/posts";
 
       var reqBody = {
         "title": _name,
@@ -327,13 +327,17 @@ var jsonResponse = jsonDecode(response.body);
       //       (route) =>false,
       // );
       // }
+
+      Navigator.pushNamed(context, '/userlists');
+
+
     }
 
     formWidget.add(ElevatedButton(
         child: const Text('Sign Up'), onPressed: onPressedSubmit));
 
     formWidget.add(ElevatedButton(
-        child: const Text('Home'), onPressed: (){
+        child: const Text('Login'), onPressed: (){
 
       // Navigator.pushAndRemoveUntil<dynamic>(context,
       //   MaterialPageRoute<dynamic>(
@@ -341,6 +345,24 @@ var jsonResponse = jsonDecode(response.body);
       //   ),
       //       (route) =>false,
       // );
+
+      Navigator.pushNamed(context, '/');
+    }));
+
+
+    formWidget.add(ElevatedButton(
+        child: const Text('User List'), onPressed: (){
+
+      // Navigator.pushAndRemoveUntil<dynamic>(context,
+      //   MaterialPageRoute<dynamic>(
+      //     builder: (BuildContext context) =>Home(),
+      //   ),
+      //       (route) =>false,
+      // );
+
+      Navigator.pushNamed(context, '/userlists');
+
+
     }));
 
     return formWidget;

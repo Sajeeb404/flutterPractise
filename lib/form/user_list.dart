@@ -2,9 +2,11 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:flutter_projects/form/signup_forms.dart';
 
 import '../model/post_model.dart';
 import '../services/services.dart';
+import 'edit_update.dart';
 
 class UserList extends StatefulWidget {
   const UserList({super.key});
@@ -38,10 +40,31 @@ class _UserListState extends State<UserList> {
   Widget _getUserList(context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('REST API Example for Post'),
+        title: const Text('Company Name'),
         actions: [
           IconButton(
               onPressed: () {
+
+                // Navigator.pushNamed(context, '/pagesignup');
+
+                Navigator.pushNamedAndRemoveUntil(
+                  context,
+                  "/pagesignup",
+                      (route) => false,
+                );
+
+
+
+                // Navigator.pushAndRemoveUntil<dynamic>(
+                //   context,
+                //   MaterialPageRoute<dynamic>(
+                //     builder: (BuildContext context) => SignUpForm(),
+                //   ),
+                //       (route) => false,
+                // );
+
+
+
                 // goBack(context);
               },
               icon: Icon(Icons.arrow_back_ios_sharp))
@@ -52,31 +75,34 @@ class _UserListState extends State<UserList> {
         child: CircularProgressIndicator(),
       )
           : Center(
-        child: ListView.builder(
-          itemCount: _userlist!.length,
-          itemBuilder: (context, index) {
-            return ListTile(
-              leading: FlutterLogo(size: 72.0),
-              title: Text(_userlist![index].title.toString()),
-              subtitle: Text(_userlist![index].body.toString()),
-              trailing: IconButton(
-                onPressed: () {
-                  // Navigator.pushAndRemoveUntil<dynamic>(
-                  //   context,
-                  //   MaterialPageRoute<dynamic>(
-                  //     builder: (BuildContext context) =>
-                  //         Detail(posts: _userlist![index]),
-                  //   ),
-                  //       (route) => false,
-                  // );
-                },
-                icon: Icon(Icons.more_vert),
-              ),
-              isThreeLine: true,
-            );
-          },
-        ),
-      ),
+            child: ListView.builder(
+              itemCount: _userlist!.length,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  leading: FlutterLogo(size: 72.0),
+                  title: Text(_userlist![index].title.toString()),
+                  subtitle: Text(_userlist![index].body.toString()),
+                  trailing: IconButton(
+                    onPressed: () {
+                      Navigator.pushAndRemoveUntil<dynamic>(
+                        context,
+                        MaterialPageRoute<dynamic>(
+                          builder: (BuildContext context) =>
+                              EditData(posts: _userlist![index]),
+                        ),
+                            (route) => false,
+                      );
+                    },
+                    icon: Icon(Icons.more_vert),
+                  ),
+                  isThreeLine: true,
+
+                );
+
+
+              },
+            ),
+          ),
     );
   }
 
