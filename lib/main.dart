@@ -5,6 +5,7 @@ import 'package:flutter_projects/pages/page3.dart';
 import 'package:flutter_projects/pages/page4.dart';
 import 'package:flutter_projects/test.dart';
 
+import 'form/dataEditform.dart';
 import 'form/edit_update.dart';
 import 'form/login_forms.dart';
 import 'form/signup_forms.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         '/pagesignup': (context) => SignUpForm(),
         '/userlists': (context) => UserList(),
         '/editUpd': (context) => EditData(),
+        '/updatepage': (context) => EditsPage(),
 
         '/page03': (context) => PractiseGird(),
         '/page04': (context) => Page3(),

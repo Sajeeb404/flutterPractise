@@ -1,9 +1,11 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:flutter_projects/form/signup_forms.dart';
 
 import '../model/post_model.dart';
 import '../services/services.dart';
+import 'dataEditform.dart';
 
 class EditData extends StatelessWidget {
 
@@ -60,11 +62,27 @@ class EditData extends StatelessWidget {
 
             TextButton(
                 onPressed: () {
+                  // Navigator.pushNamed(context, '/updatepage');
+
+                  // Navigator.pushNamedAndRemoveUntil(
+                  //   context,
+                  //   "/updatepage",
+                  //       (route) => false,
+                  // );
+
+
+
+                  Navigator.pushAndRemoveUntil<dynamic>(context,
+                    MaterialPageRoute<dynamic>(
+                      builder: (BuildContext context) =>SignUpForm(posts:posts),
+                    ),
+                        (route) =>false,
+                  );
 
 
 
 
-                  Navigator.pushNamed(context, '/pagesignup');
+
                 },
                 child: Icon(Icons.edit)),
 

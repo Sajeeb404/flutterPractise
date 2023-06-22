@@ -1,3 +1,9 @@
+
+
+
+
+
+
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
@@ -10,17 +16,19 @@ import '../services/services.dart';
 
 
 
-class SignUpForm extends StatefulWidget {
+class EditsPage extends StatefulWidget {
+
 
   final UserPostmodel? posts;
-  SignUpForm({this.posts});
+  EditsPage({this.posts});
+
 
 
   @override
-  State<SignUpForm> createState() => _SignUpFormState();
+  State<EditsPage> createState() => _SignUpFormState();
 }
 
-class _SignUpFormState extends State<SignUpForm> {
+class _SignUpFormState extends State<EditsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +37,7 @@ class _SignUpFormState extends State<SignUpForm> {
       ),
       body: Container(
         padding: EdgeInsets.all(20),
-        child: widget.posts == null ? Signups() : Signups(postss: widget.posts),
+        child: Signups(postss: widget.posts),
       ),
     );
   }
@@ -41,30 +49,46 @@ class Signups extends StatefulWidget {
   Signups({this.postss});
 
 
-
   @override
   State<Signups> createState() => _SignupsState();
 }
-
-
 class _SignupsState extends State<Signups> {
 
 
+  // TextEditingController _user = TextEditingController();
+  // TextEditingController _user2 = TextEditingController();
+
+  int _id = 0;
+
+  String _name = "";
+  String _email = "";
+  int _age = -1;
+  String _maritalStatus = "Single";
+  String _password = "";
+  int _selectedGender = 0;
+  bool _termsChecked = true;
+
+
+  @override
   void initState() {
     // TODO: implement initState
 
+    print("------------------------"+ widget.postss!.title.toString());
 
     // _user.text = widget.postss!.title.toString();
     // _user2.text = widget.postss!.body.toString();
-
-if(widget.postss!=null){
-  _name = widget.postss!.title.toString();
-  _email = widget.postss!.body.toString();
-  _id = widget.postss!.id!;
-}
+    _name = widget.postss!.title.toString();
+    _password = widget.postss!.body.toString();
+    _id = widget.postss!.id!;
 
 
   }
+
+
+
+  final _passKey = GlobalKey<FormFieldState>();
+
+
 
 
   loadGenderList() {
@@ -84,18 +108,7 @@ if(widget.postss!=null){
       value: 2,
     ));
   }
-
-  int _id = 0;
-  final _passKey = GlobalKey<FormFieldState>();
-  String _name = "";
-  String _email = "";
-  int _age = -1;
-  String _maritalStatus = "Single";
-  String _password = "";
-  int _selectedGender = 0;
-  bool _termsChecked = true;
-
-
+  
 
 
 
@@ -119,6 +132,7 @@ if(widget.postss!=null){
 
     formWidget.add(
       TextFormField(
+        // controller: _user,
         initialValue: _name,
         decoration:
         const InputDecoration(labelText: 'Enter Name', hintText: 'Name'),
@@ -129,6 +143,8 @@ if(widget.postss!=null){
             return null;
           }
         },
+
+
 
 
         onChanged: (value) {
@@ -154,8 +170,9 @@ if(widget.postss!=null){
       }
     }
 
+
     formWidget.add(TextFormField(
-      initialValue: _email,
+      initialValue: _password,
       decoration:
       const InputDecoration(labelText: 'Enter Email', hintText: 'Email'),
       keyboardType: TextInputType.emailAddress,
@@ -287,101 +304,55 @@ if(widget.postss!=null){
       controlAffinity: ListTileControlAffinity.leading,
     ));
 
-    Future<void> onPressedSubmit() async {
-      // if (_formKey.currentState!.validate() && _termsChecked) {
-      //   _formKey.currentState?.save();
+    Future<void> onPressedSubmitUpade() async {
 
-
-      // Product product = new Product();
       //
-      // product.name = _name;
-      // product.email = _email;
-      // product.price = _age.toString();
-      // product.quantity = _password;
+      // UserPostmodel up = new UserPostmodel();
       //
-      // (await ProductApiService().createProduct(product));
-      // print("Delete Call!");
-
-
-      // print("Name " + _name);
-      // print("Email " + _email);
-      // print("Age " + _age.toString());
-//       switch (_selectedGender) {
-//         case 0 :
-//           print("Gender Male");
-//           break;
-//         case 1:
-//           print("Gender Female");
-//           break;
-//         case 3:
-//           print("Gender Others");
-//           break;
-//       }
-//
-//       print("Name " + _name);
-//       print("Email " + _email);
-//       print("Age " + _age.toString());
-//       print("Marital Status " + _maritalStatus);
-//       print("Password " + _password);
-//       print("Termschecked " + _termsChecked.toString());
-//
-//       ScaffoldMessenger.of(context)
-//           .showSnackBar(const SnackBar(content: Text('Form Submitted')));
-//
-//       final String urls = "http://192.168.20.38:8080/api/posts";
-//
-//       var reqBody = {
-//         "title": _name,
-//         "body": _email,
-//       };
-//
-// var response = await http.post(Uri.parse(urls),
-//       headers:{"Content-Type":"application/json"},
-//       body: jsonEncode(reqBody)
-// );
-//
-//
-// var jsonResponse = jsonDecode(response.body);
-// if(jsonResponse['status']){
-//   print("dadsaf submit");
-//       }else{
-//   print("Something went wrong");
-//       }
-
-
-
-
-      // Navigator.pushAndRemoveUntil<dynamic>(context,
-      //   MaterialPageRoute<dynamic>(
-      //     builder: (BuildContext context) =>Home(),
-      //   ),
-      //       (route) =>false,
-      // );
+      // up.title = _name;
+      // up.body = _password;
+      //
+      //
+      //
+      // if(widget.postss != null){
+      //   up.id = _id;
       // }
-
+      //
+      // (await ApiService().onPressedUpdate(up))!;
+      //
+      //
+      //
       // Navigator.pushNamed(context, '/userlists');
 
+      
+      
 
-      UserPostmodel up = new UserPostmodel();
-      up.title = _name;
-      up.body = _email;
+      // final String urls = "http://192.168.20.38:8080/api/posts";
+      // var reqBody = {
+      //   "id":_id,
+      //   "title": _name,
+      //   "body": _email,
+      // };
+      
+      
+      //
+      // var response = await http.post(Uri.parse(urls),
+      //     headers:{"Content-Type":"application/json"},
+      //     body: jsonEncode(reqBody)
+      // );
 
-
-      if(widget.postss != null){
-        up.id = _id;
-      }
-
-      print(_name + "---------"+ _email);
-      await ApiService().onPressedUpdate(up);
-      Navigator.pushNamed(context, '/userlists');
+      
+      
+      // var jsonResponse = jsonDecode(response.body);
+     
+      
+      
+      
 
     }
 
     formWidget.add(ElevatedButton(
-        // child: const Text('Sign Up'), onPressed: onPressedSubmit
-        child: widget.postss == null ? Text('Sign Up') : Text('Update'), onPressed: onPressedSubmit
-
-    ));
+        child: const Text('Sign Up'), onPressed: onPressedSubmitUpade));
 
     formWidget.add(ElevatedButton(
         child: const Text('Login'), onPressed: (){

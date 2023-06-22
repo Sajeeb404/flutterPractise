@@ -1,7 +1,9 @@
 
 
 
+import 'dart:convert';
 import 'dart:developer';
+
 
 
 import '../model/post_model.dart';
@@ -25,6 +27,27 @@ class ApiService{
       log(e.toString());
     }
   }
+
+
+  Future<void> onPressedUpdate(UserPostmodel userPostmodel) async {
+    var urls = Uri.parse("http://192.168.20.38:8080/api/posts");
+    var response = await http.post(urls,
+        headers:{"Content-Type":"application/json"},
+        body: jsonEncode(userPostmodel),
+    );
+
+    if(response.statusCode == 200){
+      print("OK----------------");
+    }else{
+      print("Error--------------------");
+    }
+  }
+
+
+
+
+
+
 
 
 
